@@ -12,7 +12,7 @@
 	<artifactId>lotoBooking</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>lotoBooking</name>
-	<description>Projet reservation de place pour évenement (loto)</description>
+	<description>Projet reservation de place pour évènement (loto)</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -60,10 +60,10 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>17</source>
-                    <target>17</target>
-                </configuration>
+				<configuration>
+					<source>17</source>
+					<target>17</target>
+				</configuration>
             </plugin>
         </plugins>
 	</build>
