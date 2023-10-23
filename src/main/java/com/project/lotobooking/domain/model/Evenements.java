@@ -1,4 +1,4 @@
-package com.project.lotoBooking.domain.model;
+package com.project.lotobooking.domain.model;
 
 import java.util.Date;
 import java.util.List;
@@ -13,5 +13,8 @@ public class Evenements {
     private Date date;
     private Salles salle;
     private List<Reservations> reservation;
+
+ //evenementEstComplet()
+ //listeParticipantEvenement()
 
 }

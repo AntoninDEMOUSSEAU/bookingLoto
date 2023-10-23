@@ -1,27 +1,37 @@
-package com.project.lotoBooking.infrastructure.adapter;
+package com.project.lotobooking.infrastructure.adapter;
 
-import com.project.lotoBooking.domain.model.Utilisateurs;
-import com.project.lotoBooking.domain.ports.secondary.IUtilisateur;
+import com.project.lotobooking.domain.model.Utilisateurs;
+import com.project.lotobooking.domain.ports.secondary.IUtilisateur;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
+@RestController
 public class UtilisateurAdapter implements IUtilisateur {
 
-    @Override
-    public Utilisateurs chercherUtilisateur(Utilisateurs utilisateur) {
-        return null;
+    private final IUtilisateur utilisateurPort;
+
+    public UtilisateurAdapter(IUtilisateur utilisateurPort) {
+        this.utilisateurPort = utilisateurPort;
     }
 
-    @Override
+    @GetMapping()
+    public List<Utilisateurs> getAllUsers() {
+        return utilisateurPort.getAllUsers();
+    }
+
+    @PostMapping
     public Utilisateurs enregistrerUtilisateur(Utilisateurs utilisateur) {
         return null;
     }
 
-    @Override
+    @PutMapping
     public Utilisateurs mettreAJourUtilisateur(Utilisateurs utilisateur) {
         return null;
     }
 
-    @Override
-    public Utilisateurs supprimerUtilisateur(Utilisateurs utilisateur) {
+    @DeleteMapping
+    public Utilisateurs supprimerUtilisateur(Utilisateurs id) {
         return null;
     }
 }

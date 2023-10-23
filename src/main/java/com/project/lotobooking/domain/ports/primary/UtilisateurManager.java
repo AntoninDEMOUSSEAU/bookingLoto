@@ -1,19 +1,22 @@
-package com.project.lotoBooking.domain.ports.primary;
+package com.project.lotobooking.domain.ports.primary;
 
 
-import com.project.lotoBooking.domain.model.Utilisateurs;
-import com.project.lotoBooking.domain.ports.secondary.IUtilisateur;
+import com.project.lotobooking.domain.model.Utilisateurs;
+import com.project.lotobooking.domain.ports.secondary.IUtilisateur;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @AllArgsConstructor
 @Service
 public class UtilisateurManager  {
 
+    //Utilisateur service??
     private final IUtilisateur utilisateurPort;
 
-    public Utilisateurs chercherUtilisateur (Utilisateurs utilisateur) {
-        return utilisateurPort.chercherUtilisateur(utilisateur);
+    public List<Utilisateurs> getAllUsers () {
+        return utilisateurPort.getAllUsers();
     }
 
 }

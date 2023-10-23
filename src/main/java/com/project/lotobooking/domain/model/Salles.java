@@ -1,15 +1,6 @@
-package com.project.lotoBooking.domain.model;
+package com.project.lotobooking.domain.model;
 
-import lombok.Getter;
-import lombok.Setter;
 
-@Getter
-@Setter
-public class Salles {
-    private Long id;
-    private String nomSalle;
-    private String adresseSalle;
-    private Integer capaciteAssis;
-    private Integer capaciteDebout;
+public record Salles (Long id, String nomSalle, String adresseSalle, Integer capaciteAssis, Integer capaciteDebout){
 
 }

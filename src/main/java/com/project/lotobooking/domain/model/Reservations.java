@@ -1,4 +1,4 @@
-package com.project.lotoBooking.domain.model;
+package com.project.lotobooking.domain.model;
 
 import lombok.Getter;
 import lombok.Setter;
