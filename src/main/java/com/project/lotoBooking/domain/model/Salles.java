@@ -6,10 +6,10 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Salles {
-    public Long id;
-    public String nomSalle;
-    public String adresseSalle;
-    public int capaciteAssis;
-    public int capaciteDebout;
+    private Long id;
+    private String nomSalle;
+    private String adresseSalle;
+    private Integer capaciteAssis;
+    private Integer capaciteDebout;
 
 }

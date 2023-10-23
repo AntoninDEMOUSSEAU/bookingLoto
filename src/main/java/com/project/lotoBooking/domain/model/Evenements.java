@@ -10,8 +10,8 @@ import lombok.Setter;
 @Setter
 public class Evenements {
     private String id;
-    public Date date;
-    public Salles salle;
-    public List<Reservations> Reservations;
+    private Date date;
+    private Salles salle;
+    private List<Reservations> reservation;
 
 }

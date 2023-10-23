@@ -6,10 +6,10 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Utilisateurs {
-    public Long id;
-    public String nom;
-    public String prenom;
-    public String email;
-    public String telephone;
+    private Long id;
+    private String nom;
+    private String prenom;
+    private String email;
+    private String telephone;
 
 }

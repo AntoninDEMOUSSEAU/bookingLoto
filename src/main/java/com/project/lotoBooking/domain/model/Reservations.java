@@ -6,5 +6,8 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Reservations {
-    public Long id;
+    private Long id;
+    private Evenements evenement;
+    private Utilisateurs utilisateurs;
+    private Integer nbResa;
 }
