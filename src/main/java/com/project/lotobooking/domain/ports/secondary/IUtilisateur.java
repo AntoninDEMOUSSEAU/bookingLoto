@@ -10,6 +10,8 @@ public interface IUtilisateur {
 
     List<Utilisateurs> getAllUsers();
 
+    Utilisateurs getUserById(Long idUtilisateur);
+
     Utilisateurs mettreAJourUtilisateur(Utilisateurs utilisateur);
 
     Utilisateurs supprimerUtilisateur(Utilisateurs utilisateur);

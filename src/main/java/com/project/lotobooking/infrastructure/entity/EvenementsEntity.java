@@ -22,6 +22,8 @@ public class EvenementsEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idEvenement;
     private Date date;
-    private Long idSalle;
-    private Long idReservation;
+    @ManyToOne()
+    private SallesEntity salles;
+    @OneToMany(mappedBy = "idReservation")
+    private List<ReservationsEntity> reservations;
 }
