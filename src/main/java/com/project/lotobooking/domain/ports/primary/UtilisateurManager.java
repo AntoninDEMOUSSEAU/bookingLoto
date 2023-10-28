@@ -10,12 +10,9 @@ import java.util.List;
 
 @AllArgsConstructor
 @Service
-public class UtilisateurManager  {
+public record UtilisateurManager(IUtilisateur utilisateurPort) {
 
-    //Utilisateur service??
-    private final IUtilisateur utilisateurPort;
-
-    public List<Utilisateurs> getAllUsers () {
+    public List<Utilisateurs> getAllUsers() {
         return utilisateurPort.getAllUsers();
     }
 

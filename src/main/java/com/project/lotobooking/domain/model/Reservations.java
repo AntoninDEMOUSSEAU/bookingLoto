@@ -10,4 +10,5 @@ public class Reservations {
     private Evenements evenement;
     private Utilisateurs utilisateurs;
     private Integer nbResa;
+    
 }
