@@ -26,4 +26,8 @@ public class UtilisateurService implements IPrimaryUtilisateur {
         return iUtilisateur.getUserById(idUtilisateur);
     }
 
+    @Override
+    public Utilisateurs supprimerUtilisateur(Long id) {
+        return iUtilisateur.supprimerUtilisateur(id);
+    }
 }

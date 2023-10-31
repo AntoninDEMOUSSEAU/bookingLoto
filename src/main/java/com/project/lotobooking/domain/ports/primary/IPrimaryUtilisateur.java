@@ -11,4 +11,6 @@ public interface IPrimaryUtilisateur {
 
     Utilisateurs getUserById( Long idUtilisateur);
 
+    Utilisateurs supprimerUtilisateur(Long idUtilisateur);
+
 }

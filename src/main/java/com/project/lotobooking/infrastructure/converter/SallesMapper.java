@@ -10,5 +10,6 @@ public interface SallesMapper {
 
     @Mapping(source = "idSalle", target = "id")
     Salles toSalles(SallesEntity sallesEntity);
-
+    @Mapping(source = "id", target = "idSalle")
+    SallesEntity fromSalles(Salles salles);
 }

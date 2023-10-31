@@ -1,5 +1,4 @@
 package com.project.lotobooking.infrastructure.converter;
-
 import com.project.lotobooking.domain.model.Reservations;
 import com.project.lotobooking.infrastructure.entity.ReservationsEntity;
 import org.mapstruct.Mapper;
@@ -11,9 +10,10 @@ import java.util.List;
 public interface ReservationsMapper {
 
     @Mapping(source = "idReservation", target = "id")
-    @Mapping(source = "idEvenement", target = "evenement.id")
-    @Mapping(source = "idUtilisateur", target = "utilisateurs.id")
     Reservations toReservation(ReservationsEntity reservationsEntity);
-
     List<Reservations> toReservations(List<ReservationsEntity> reservationsEntity);
+
+    @Mapping(source = "id", target = "idReservation")
+    ReservationsEntity fromReservation(Reservations reservations);
+    List<ReservationsEntity> fromReservation(List<Reservations> reservations);
 }

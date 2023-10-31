@@ -14,5 +14,5 @@ public interface IUtilisateur {
 
     Utilisateurs mettreAJourUtilisateur(Utilisateurs utilisateur);
 
-    Utilisateurs supprimerUtilisateur(Utilisateurs utilisateur);
+    Utilisateurs supprimerUtilisateur(Long idUtilisateur);
 }

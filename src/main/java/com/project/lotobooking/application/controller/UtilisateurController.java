@@ -2,10 +2,7 @@ package com.project.lotobooking.application.controller;
 
 import com.project.lotobooking.domain.model.Utilisateurs;
 import com.project.lotobooking.domain.ports.primary.IPrimaryUtilisateur;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -33,5 +30,11 @@ public class UtilisateurController {
     public Utilisateurs getUserById(@PathVariable Long idUtilisateur){
 
         return iPrimaryUtilisateur.getUserById(idUtilisateur);
+    }
+
+    @DeleteMapping("/{idUtilisateur}")
+    public Utilisateurs supprimerUtilisateur (@PathVariable Long idUtilisateur){
+
+        return iPrimaryUtilisateur.supprimerUtilisateur(idUtilisateur);
     }
 }
