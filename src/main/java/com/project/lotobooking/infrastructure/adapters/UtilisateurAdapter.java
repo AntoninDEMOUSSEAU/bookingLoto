@@ -3,40 +3,39 @@ package com.project.lotobooking.infrastructure.adapters;
 import com.project.lotobooking.domain.model.Utilisateurs;
 import com.project.lotobooking.domain.ports.secondary.IUtilisateur;
 import com.project.lotobooking.infrastructure.converter.UtilisateurMapper;
+
+import com.project.lotobooking.infrastructure.repositoy.UtilisateurRepository;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Objects;
 
+
 @Component
-@Repository
 public class UtilisateurAdapter implements IUtilisateur {
 
     UtilisateurMapper utilisateurMapper;
-
-    private final List<Utilisateurs> utilisateurs =  List.of(
-            new Utilisateurs(1L, "Demousseau", "Antonin", "anto.demouss@gmail.com", "0600000000"),
-            new Utilisateurs(2L, "Brossard", "Rudy", "rudy.bro@gmail.com", "0600000000"));
-
-    @Override
-    public Utilisateurs enregistrerUtilisateur(Utilisateurs utilisateur) {
-        return null;
-    }
+    private UtilisateurRepository utilisateurRepository;
 
     @Override
     public List<Utilisateurs> getAllUsers() {
-
-        //mapper.toUtilisateur(utiliateurEntity) pour faire le lien entre l'infra et le domain via les converter/mapper
-        return utilisateurs;
+       return utilisateurMapper.toUtilisateurs(utilisateurRepository.findAll());
     }
 
     @Override
     public Utilisateurs getUserById(Long idUtilisateur) {
-        return utilisateurs.stream()
-                .filter(utilisateurs1 -> Objects.equals(utilisateurs1.id(), idUtilisateur))
+        return utilisateurRepository.findAll().stream()
+                .filter(utilisateurs1 -> Objects.equals(utilisateurs1.getId(), idUtilisateur))
                 .findFirst()
+                .map(utilisateurMapper::toUtilisateur)
                 .orElse(null);
+    }
+
+    @Override
+    public Utilisateurs enregistrerUtilisateur(Utilisateurs utilisateur) {
+
+
+        return utilisateurMapper.toUtilisateur(utilisateurRepository.save(utilisateurMapper.fromUtilisateur(utilisateur)));
     }
 
     @Override
@@ -45,7 +44,7 @@ public class UtilisateurAdapter implements IUtilisateur {
     }
 
     @Override
-    public Utilisateurs supprimerUtilisateur(Long idUtilisateur) {
-      return null;
+    public void supprimerUtilisateur(Long idUtilisateur) {
+      utilisateurRepository.deleteById(idUtilisateur);
     }
 }

@@ -32,6 +32,12 @@ public class UtilisateurController {
         return iPrimaryUtilisateur.getUserById(idUtilisateur);
     }
 
+    @PostMapping
+    public Utilisateurs creerUtilisateur(Utilisateurs utilisateurs){
+        return iPrimaryUtilisateur.creerUtilisateur(utilisateurs);
+
+    }
+
     @DeleteMapping("/{idUtilisateur}")
     public Utilisateurs supprimerUtilisateur (@PathVariable Long idUtilisateur){
 

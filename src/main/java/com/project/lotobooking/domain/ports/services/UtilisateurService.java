@@ -27,6 +27,12 @@ public class UtilisateurService implements IPrimaryUtilisateur {
     }
 
     @Override
+    public Utilisateurs creerUtilisateur(Utilisateurs utilisateurs){
+        return iUtilisateur.enregistrerUtilisateur(utilisateurs);
+
+    }
+
+    @Override
     public Utilisateurs supprimerUtilisateur(Long id) {
         return iUtilisateur.supprimerUtilisateur(id);
     }

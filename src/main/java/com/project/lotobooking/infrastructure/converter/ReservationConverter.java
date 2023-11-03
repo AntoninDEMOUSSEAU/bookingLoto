@@ -17,7 +17,7 @@ public class ReservationConverter {
         return Reservations.builder()
                 .id(reservationsEntity.getIdReservation())
                 .evenement(evenementMapper.toEvenement(reservationsEntity.getEvenement()))
-                .utilisateur(utilisateurMapper.toUtilisteur(reservationsEntity.getUtilisateur()))
+                .utilisateur(utilisateurMapper.toUtilisateur(reservationsEntity.getUtilisateur()))
                 .nbResa(reservationsEntity.getNbResa())
                 .build();
 

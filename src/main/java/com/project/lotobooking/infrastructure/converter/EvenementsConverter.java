@@ -16,16 +16,15 @@ public class EvenementsConverter {
 
     //Méthode permettant de faire communiquer mon infra vers mon domaine (exemple récupérer un evenement)
     public Evenements fromEntity(EvenementsEntity evt) {
-
         return Evenements.builder()
                 .id(evt.getIdEvenement())
                 .date(evt.getDate())
                 .salle(sallesMapper.toSalles(evt.getSalles()))
                 .reservation(reservationsMapper.toReservations(evt.getReservations()))
                 .build();
-
-        //Méthode permettant de faire communiquer mon domaine vers mon infra (exemple création d'un Evenement)
     }
+
+    //Méthode permettant de faire communiquer mon domaine vers mon infra (exemple création d'un Evenement)
     public static EvenementsEntity fromModel(Evenements evt){
            return EvenementsEntity.builder()
                    .idEvenement(evt.getId())
@@ -34,6 +33,4 @@ public class EvenementsConverter {
                    .reservations(reservationsMapper.fromReservation(evt.getReservation()))
                    .build();
        }
-
     }
-
