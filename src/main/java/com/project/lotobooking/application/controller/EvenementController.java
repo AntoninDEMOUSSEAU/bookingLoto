@@ -1,7 +1,7 @@
 package com.project.lotobooking.application.controller;
 
 import com.project.lotobooking.domain.model.Evenements;
-import com.project.lotobooking.infrastructure.ports.primary.IPrimaryEvenement;
+import com.project.lotobooking.domain.ports.primary.IPrimaryEvenement;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

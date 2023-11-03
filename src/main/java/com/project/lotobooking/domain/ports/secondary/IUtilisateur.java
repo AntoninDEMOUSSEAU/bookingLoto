@@ -1,4 +1,4 @@
-package com.project.lotobooking.infrastructure.ports.secondary;
+package com.project.lotobooking.domain.ports.secondary;
 
 import com.project.lotobooking.domain.model.Utilisateurs;
 

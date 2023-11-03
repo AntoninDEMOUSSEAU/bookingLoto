@@ -1,7 +1,7 @@
 package com.project.lotobooking.infrastructure.adapters;
 
 import com.project.lotobooking.domain.model.Evenements;
-import com.project.lotobooking.infrastructure.ports.secondary.IEvenement;
+import com.project.lotobooking.domain.ports.secondary.IEvenement;
 import com.project.lotobooking.infrastructure.converter.EvenementMapper;
 import com.project.lotobooking.infrastructure.repositoy.EvenementRepository;
 import org.springframework.stereotype.Component;

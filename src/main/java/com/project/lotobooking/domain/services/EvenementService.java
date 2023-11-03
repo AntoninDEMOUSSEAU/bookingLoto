@@ -1,8 +1,8 @@
 package com.project.lotobooking.domain.services;
 
 import com.project.lotobooking.domain.model.Evenements;
-import com.project.lotobooking.infrastructure.ports.primary.IPrimaryEvenement;
-import com.project.lotobooking.infrastructure.ports.secondary.IEvenement;
+import com.project.lotobooking.domain.ports.primary.IPrimaryEvenement;
+import com.project.lotobooking.domain.ports.secondary.IEvenement;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

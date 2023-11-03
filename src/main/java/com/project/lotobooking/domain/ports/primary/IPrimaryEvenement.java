@@ -1,4 +1,4 @@
-package com.project.lotobooking.infrastructure.ports.primary;
+package com.project.lotobooking.domain.ports.primary;
 
 import com.project.lotobooking.domain.model.Evenements;
 
