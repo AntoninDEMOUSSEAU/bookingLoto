@@ -1,4 +1,4 @@
-package com.project.lotobooking.domain.ports.primary;
+package com.project.lotobooking.infrastructure.ports.primary;
 
 
 import com.project.lotobooking.domain.model.Utilisateurs;
@@ -13,6 +13,8 @@ public interface IPrimaryUtilisateur {
 
     Utilisateurs creerUtilisateur(Utilisateurs utilisateurs);
 
-    Utilisateurs supprimerUtilisateur(Long idUtilisateur);
+    Utilisateurs updateUtilisateur(Utilisateurs utilisateurs);
+
+    void supprimerUtilisateur(Long idUtilisateur);
 
 }

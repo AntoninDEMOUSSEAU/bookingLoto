@@ -1,7 +1,7 @@
 package com.project.lotobooking.application.controller;
 
 import com.project.lotobooking.domain.model.Utilisateurs;
-import com.project.lotobooking.domain.ports.primary.IPrimaryUtilisateur;
+import com.project.lotobooking.infrastructure.ports.primary.IPrimaryUtilisateur;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -39,8 +39,8 @@ public class UtilisateurController {
     }
 
     @DeleteMapping("/{idUtilisateur}")
-    public Utilisateurs supprimerUtilisateur (@PathVariable Long idUtilisateur){
+    public void supprimerUtilisateur (@PathVariable Long idUtilisateur){
 
-        return iPrimaryUtilisateur.supprimerUtilisateur(idUtilisateur);
+        iPrimaryUtilisateur.supprimerUtilisateur(idUtilisateur);
     }
 }

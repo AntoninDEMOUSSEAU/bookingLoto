@@ -1,7 +1,7 @@
 package com.project.lotobooking.infrastructure.adapters;
 
 import com.project.lotobooking.domain.model.Utilisateurs;
-import com.project.lotobooking.domain.ports.secondary.IUtilisateur;
+import com.project.lotobooking.infrastructure.ports.secondary.IUtilisateur;
 import com.project.lotobooking.infrastructure.converter.UtilisateurMapper;
 
 import com.project.lotobooking.infrastructure.repositoy.UtilisateurRepository;
