@@ -1,8 +1,5 @@
 package com.project.lotobooking.domain.ports.primary;
-
 import com.project.lotobooking.domain.model.Evenements;
-
-
 import java.util.List;
 
 public interface IPrimaryEvenement {

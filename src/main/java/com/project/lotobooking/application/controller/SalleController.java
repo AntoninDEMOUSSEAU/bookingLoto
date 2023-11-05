@@ -16,7 +16,7 @@ public class SalleController {
     }
 
     @GetMapping()
-    public List<Salles> getAllSalles() {
+    public List<Salles> getAllSalle() {
         return iPrimarySalle.getAllSalle();
     }
     @GetMapping("/{idSalle}")
@@ -24,12 +24,11 @@ public class SalleController {
         return iPrimarySalle.getSalleById(idSalle);
     }
     @PostMapping
-    public Salles creerReservation(Salles reservations){
-        return iPrimarySalle.creerSalle(reservations);
+    public Salles creerSalle(Salles salles){
+        return iPrimarySalle.creerSalle(salles);
     }
-
     @DeleteMapping("/{idSalle}")
-    public void supprimerReservation(@PathVariable Long idSalle){
+    public void supprimerSalle(@PathVariable Long idSalle){
         iPrimarySalle.supprimerSalle(idSalle);
     }
 }

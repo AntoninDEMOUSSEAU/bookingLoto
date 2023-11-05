@@ -1,10 +1,8 @@
 package com.project.lotobooking.domain.services;
-
 import com.project.lotobooking.domain.model.Reservations;
 import com.project.lotobooking.domain.ports.primary.IPrimaryReservation;
 import com.project.lotobooking.domain.ports.secondary.IReservation;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
