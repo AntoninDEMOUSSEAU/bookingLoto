@@ -1,19 +1,36 @@
 import './App.css'
+import {RouterProvider, createBrowserRouter} from 'react-router-dom';
 import {FormulaireSalle} from "./Pages/salles/formulaireSalle";
-import {TopBar} from "./components/TopBar";
 import {FormulaireUtilisateur} from "./Pages/utilisateur/FormulaireUtilisateur";
+import {LayoutPage} from "./components/Layout-page";
+
+const router = createBrowserRouter([
+    {
+        path: '/',
+        element: <LayoutPage/>,
+        children: [
+            {
+                index: true, Component: () => <FormulaireSalle/>
+            },
+            {
+                path: '/salle',
+                element: <FormulaireSalle/>
+            },
+            {
+                path: '/user',
+                element: <FormulaireUtilisateur/>
+            }
+        ]
+    },
+
+]);
 
 function App() {
 
-
   return (
-    <>
-        <TopBar/>
-        <h1>Projet #1</h1>
-        <FormulaireSalle/>
-        <FormulaireUtilisateur/>
-
-    </>
+      <>
+          <RouterProvider router={router}/>
+      </>
   )
 }
 
