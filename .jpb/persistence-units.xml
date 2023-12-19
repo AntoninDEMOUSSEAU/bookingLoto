@@ -4,7 +4,7 @@
     <persistence-units>
       <persistence-unit name="Default">
         <packages>
-          <package value="com.project.lotoBooking" />
+          <package value="com.project.lotobooking" />
         </packages>
       </persistence-unit>
     </persistence-units>
